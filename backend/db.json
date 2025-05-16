@@ -1,0 +1,81 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "descricao": "Ir ao supermercado",
+      "categoria": "Casa",
+      "statusFinalizado": true,
+      "prioridade": "Baixa"
+    },
+    {
+      "id": 2,
+      "descricao": "Estudar sobre acessibilidade",
+      "categoria": "Trabalho",
+      "statusFinalizado": true,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 4,
+      "descricao": "Preencher formulário de inscrição",
+      "categoria": "Estudos",
+      "statusFinalizado": true,
+      "prioridade": "Normal"
+    },
+    {
+      "id": 5,
+      "descricao": "Trocar lâmpada",
+      "categoria": "Casa",
+      "statusFinalizado": true,
+      "prioridade": "Alta"
+    },
+    {
+      "id": 6,
+      "descricao": "Ler",
+      "statusFinalizado": true,
+      "categoria": "Estudos",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 7,
+      "descricao": "Estudar Angular",
+      "statusFinalizado": true,
+      "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 8,
+      "descricao": "Cuidar do Dulk",
+      "statusFinalizado": false,
+      "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 9,
+      "descricao": "Finalizar Projeto",
+      "statusFinalizado": true,
+      "categoria": "Trabalho",
+      "prioridade": "Normal"
+    },
+    {
+      "id": 10,
+      "descricao": "estudar",
+      "statusFinalizado": false,
+      "categoria": "Estudos",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 11,
+      "descricao": "limpar casa",
+      "statusFinalizado": false,
+      "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 12,
+      "descricao": "Estudar Angular",
+      "statusFinalizado": true,
+      "categoria": "Estudos",
+      "prioridade": "Alta"
+    }
+  ]
+}
