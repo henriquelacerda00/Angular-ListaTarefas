@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class TarefaService {
-  private readonly API = environment.apiUrl
+  private readonly API = environment.apiUrl + '/tarefas';
   private tarefasSubject = new BehaviorSubject<Tarefa[]>([])
   tarefas$ = this.tarefasSubject.asObservable()
   constructor(private http: HttpClient) {}
