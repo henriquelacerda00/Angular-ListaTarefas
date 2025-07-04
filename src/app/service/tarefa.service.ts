@@ -3,12 +3,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 import { Tarefa } from '../interface/tarefa';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TarefaService {
-  private readonly API = 'http://localhost:3000/tarefas';
+  private readonly API = environment.apiUrl
   private tarefasSubject = new BehaviorSubject<Tarefa[]>([])
   tarefas$ = this.tarefasSubject.asObservable()
   constructor(private http: HttpClient) {}
