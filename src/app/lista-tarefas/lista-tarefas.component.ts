@@ -27,6 +27,7 @@ export class ListaTarefasComponent implements OnInit {
   categoria: string = '';
   validado: boolean = false;
   campoBusca: string = '';
+  indexTarefa:number = -1;
   tarefasFiltradas: Tarefa[] = [];
   tarefasSubscription: Subscription = new Subscription();
 
