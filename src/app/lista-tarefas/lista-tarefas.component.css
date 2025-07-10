@@ -62,6 +62,7 @@ input[type="search"]::-webkit-search-decoration,
   margin-right: 25%;
   margin-left: 25%;
   border-radius: 8px;
+  max-height: 150px;
 }
 
 .card-Estudos {
@@ -243,14 +244,20 @@ input:focus {
 
 .conteudo {
   display: flex;
-  justify-content: space-between;
-  align-items: last baseline;
-  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
   margin-bottom: 12px;
 }
 
 .botoes-card button {
   background-color: inherit;
+}
+
+.botoes-card{
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .card-descricao {
@@ -275,7 +282,7 @@ input:focus {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 40px;
+  height: 20px;
   font-family: "Prompt";
   color: #263238;
 }
@@ -403,31 +410,62 @@ input::placeholder {
   .info-card {
     display: flex;
     flex-direction: column;
-    width: min-content;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    gap: 0.5rem; /* Espaçamento entre os itens */
+    width: 100%;
     margin-left: 0;
+  }
+
+  /* Reduz as margens laterais do formulário e da lista para aproveitar melhor a tela */
+  .formulario,
+  .lista-tarefas {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .prioridade-tarefa,
   .categoria-tarefa {
     margin-left: 0;
+    margin-top: 0;
+    width: fit-content;
   }
 
+  /* Remove a altura máxima para o conteúdo não ser cortado e adiciona padding */
   .lista-tarefas {
-    display: flex;
-    align-items: center;
+    max-height: none;
+    padding: 1rem;
   }
 
-  .criar-tarefa button {
-    margin-top: 32px;
+  /* Ajusta o container do conteúdo principal do card (descrição e botões) */
+  .conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
   }
 
   .card-descricao {
-    margin-top: 30px;
+    margin: 0;
+    max-width: 100%;
+    text-align: left;
   }
 
-  .icone-checked,
-  .icone-unchecked {
-    margin-right: 25%;
+  /* Alinha o botão de status à direita do card */
+  .status-tarefa {
+    align-self: flex-end;
+    height: auto;
+    margin-top: -2.5rem; /* Sobe um pouco para alinhar com a categoria/prioridade */
+  }
+
+  .status-tarefa button {
+    margin-top: 0;
+  }
+
+  /* Alinha os botões de editar/excluir à direita */
+  .botoes-card {
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 0;
   }
 }
 

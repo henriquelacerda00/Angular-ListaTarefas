@@ -97,21 +97,21 @@
         <p class="prioridade-tarefa prioridade-{{ tarefa.prioridade }}">
           {{ tarefa.prioridade }}
         </p>
-        <p class="status-tarefa">
-          <button
-
-            [ngClass]="(tarefa.statusFinalizado == true) ? 'icone-checked' : 'icone-unchecked'"
-            (click)="finalizarTarefa(tarefa);"
-            [@checkOrNot]="(tarefa.statusFinalizado) ? 'check' : 'unCheck' ">
-          </button>
-        </p>
       </div>
+      <p class="status-tarefa">
+        <button
+
+          [ngClass]="(tarefa.statusFinalizado == true) ? 'icone-checked' : 'icone-unchecked'"
+          (click)="finalizarTarefa(tarefa);"
+          [@checkOrNot]="(tarefa.statusFinalizado) ? 'check' : 'unCheck' ">
+        </button>
+      </p>
+      <p
+        class="card-descricao ff-prompt
+        card-{{ tarefa.statusFinalizado ? 'Feito' : '' }}">
+          {{ tarefa.descricao }}
+      </p>
       <div class="conteudo">
-        <p
-          class="card-descricao ff-prompt
-          card-{{ tarefa.statusFinalizado ? 'Feito' : '' }}">
-            {{ tarefa.descricao }}
-        </p>
         <div class="botoes-card">
           <button
             class="botao-editar"
