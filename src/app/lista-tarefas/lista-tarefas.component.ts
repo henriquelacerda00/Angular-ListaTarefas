@@ -27,7 +27,7 @@ export class ListaTarefasComponent implements OnInit {
   categoria: string = '';
   validado: boolean = false;
   campoBusca: string = '';
-  indexTarefa:number = -1;
+  indexTarefa: number = -1;
   tarefasFiltradas: Tarefa[] = [];
   tarefasSubscription: Subscription = new Subscription();
 
@@ -42,7 +42,7 @@ export class ListaTarefasComponent implements OnInit {
   constructor(
     private service: TarefaService,
     private fomBuilder: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.service.listar();
@@ -155,5 +155,21 @@ export class ListaTarefasComponent implements OnInit {
 
   ngOnDestroy(): void {
     this.tarefasSubscription.unsubscribe();
+  }
+
+  desfazerAcao() {
+    this.service.desfazer();
+  }
+
+  refazerAcao() {
+    this.service.refazer();
+  }
+
+  podeDesfazer(): boolean {
+    return this.service.podeDesfazer();
+  }
+
+  podeRefazer(): boolean {
+    return this.service.podeRefazer();
   }
 }

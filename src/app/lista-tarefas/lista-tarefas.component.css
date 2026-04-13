@@ -39,7 +39,9 @@ input[type='search']:focus {
 input[type="search"]::-webkit-search-decoration,
 ::-webkit-search-cancel-button,
 ::-webkit-search-results-button,
-::-webkit-search-results-decoration {display: none;}
+::-webkit-search-results-decoration {
+  display: none;
+}
 
 @media(max-width: 1060px) {
   .busca {
@@ -53,6 +55,7 @@ input[type="search"]::-webkit-search-decoration,
     margin-right: 0;
   }
 }
+
 .lista-tarefas {
   display: flex;
   flex-direction: column;
@@ -64,6 +67,40 @@ input[type="search"]::-webkit-search-decoration,
   border-radius: 8px;
   max-height: 150px;
 }
+
+.acoes-pilha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.botao-pilha {
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Prompt";
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 16px;
+  line-height: 24px;
+  min-width: 110px;
+  margin-bottom: 0;
+}
+
+.botao-desfazer {
+  background: #6c757d;
+}
+
+.botao-refazer {
+  background: #4f8cff;
+}
+
+.botao-desfazer:hover,
+.botao-refazer:hover {
+  filter: brightness(0.95);
+}
+
 
 .card-Estudos {
   background: #f9f0ff;
@@ -254,7 +291,7 @@ input:focus {
   background-color: inherit;
 }
 
-.botoes-card{
+.botoes-card {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -410,8 +447,10 @@ input::placeholder {
   .info-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    gap: 0.5rem; /* Espaçamento entre os itens */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
+    gap: 0.5rem;
+    /* Espaçamento entre os itens */
     width: 100%;
     margin-left: 0;
   }
@@ -454,7 +493,8 @@ input::placeholder {
   .status-tarefa {
     align-self: flex-end;
     height: auto;
-    margin-top: -2.5rem; /* Sobe um pouco para alinhar com a categoria/prioridade */
+    margin-top: -2.5rem;
+    /* Sobe um pouco para alinhar com a categoria/prioridade */
   }
 
   .status-tarefa button {
